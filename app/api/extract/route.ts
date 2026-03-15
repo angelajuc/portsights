@@ -54,7 +54,7 @@ Return this exact structure:
   "country_of_origin": "string or null",
   "invoice_number": "string or null",
   "invoice_date": "string or null",
-  "invoice_value": "number or null",
+  "invoice_value": "number or null use the invoice total if present, otherwise sum all line item total_values plus any freight, insurance, and handling charges",
   "currency": "string or null",
   "incoterms": "string or null",
   "line_items": [
