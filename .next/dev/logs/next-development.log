@@ -1,0 +1,17 @@
+[00:00:00.469] Server  LOG     ✓ Ready in 315ms
+[00:00:03.938] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:31.833] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:32.864] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:52.766] Server  LOG     ✓ Compiled in 32ms
+[00:37:12.649] Server  LOG     ✓ Compiled in 13ms
+[00:37:16.267] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:08.762] Server  LOG     ✓ Compiled in 134ms
+[00:43:04.817] Server  LOG     ✓ Compiled in 18ms
+[00:43:31.208] Server  LOG     ✓ Compiled in 30ms
+[00:45:04.647] Server  LOG     ✓ Compiled in 41ms
+[00:45:16.448] Server  LOG     ✓ Compiled in 28ms
+[01:22:02.332] Server  ERROR   (node:82903) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[01:22:02.854] Server  ERROR   Extract error: Error: 400 {"type":"error","error":{"type":"invalid_request_error","message":"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits."},"request_id":"req_011CZ47SJPxrLP4gzj9ZsVaB"}
+[01:22:02.963] Browser ERROR   {}
+[01:24:02.265] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

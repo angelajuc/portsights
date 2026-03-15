@@ -206,8 +206,8 @@ export default function Home() {
       <div style={{ background: '#0F172A', padding: '16px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{ width: 8, height: 8, background: '#3B82F6', borderRadius: '50%' }} />
-          <span style={{ color: '#fff', fontFamily: 'DM Serif Display, serif', fontSize: 18, letterSpacing: '-0.01em' }}>ClearPath</span>
-          <span style={{ color: '#475569', fontSize: 12, marginLeft: 4, fontFamily: 'DM Mono, monospace' }}>AI Customs Intelligence</span>
+          <span style={{ color: '#fff', fontFamily: 'DM Serif Display, serif', fontSize: 18, letterSpacing: '-0.01em' }}>Portsights</span>
+          <span style={{ color: '#475569', fontSize: 12, marginLeft: 4, fontFamily: 'DM Mono, monospace' }}>AI Enhanced Customs Brokerage Intelligence</span>
         </div>
         {stage === 'done' && (
           <button onClick={reset} style={{ background: 'transparent', border: '1px solid #334155', color: '#94A3B8', padding: '6px 14px', borderRadius: 6, fontSize: 12, cursor: 'pointer', fontFamily: 'DM Sans, sans-serif' }}>
@@ -223,7 +223,7 @@ export default function Home() {
           <div className="fade-up">
             <div style={{ textAlign: 'center', marginBottom: 48 }}>
               <h1 style={{ fontFamily: 'DM Serif Display, serif', fontSize: 42, fontWeight: 400, letterSpacing: '-0.02em', lineHeight: 1.1, marginBottom: 12 }}>
-                Customs entry,<br />automated.
+                Customs data entry,<br />automated.
               </h1>
               <p style={{ color: '#64748B', fontSize: 16, maxWidth: 460, margin: '0 auto' }}>
                 Upload a commercial invoice. AI extracts fields, classifies HTS codes, and flags compliance risks in seconds.
@@ -244,7 +244,7 @@ export default function Home() {
               }}
             >
               <div style={{ fontSize: 40, marginBottom: 16 }}>📄</div>
-              <p style={{ fontWeight: 500, marginBottom: 6 }}>Drop your commercial invoice here</p>
+              <p style={{ fontWeight: 500, marginBottom: 6 }}>Upload commercial invoice here</p>
               <p style={{ fontSize: 13, color: '#94A3B8' }}>PDF format · Up to 10MB</p>
               <div style={{ marginTop: 20, display: 'inline-block', background: '#0F172A', color: '#fff', padding: '10px 22px', borderRadius: 8, fontSize: 13, fontWeight: 500 }}>
                 Browse files
@@ -352,7 +352,7 @@ export default function Home() {
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
                   <div style={{ width: 6, height: 6, background: '#0F172A', borderRadius: '50%' }} />
-                  <span style={{ fontWeight: 600, fontSize: 13 }}>HTS Classification</span>
+                  <span style={{ fontWeight: 600, fontSize: 13 }}>HTS Code Classification</span>
                   <span style={{ fontSize: 11, color: '#94A3B8', marginLeft: 4 }}>Broker review required before filing</span>
                 </div>
                 {classifications.map((c, i) => (

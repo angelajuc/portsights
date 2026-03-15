@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'ClearPath — AI Customs Intelligence',
-  description: 'Automate customs entry with AI-powered document extraction and HTS classification',
+  title: 'Portsights AI Driven Customs Brokerage Intelligence',
+  description: 'Automate manual data entry with AI powered document extraction and HTS code classification',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
