@@ -94,5 +94,5 @@ Then **in n8n**, update your HTTP Request node:
 - Body (raw JSON expression):
 ```
 {
-  "file": "={{ $binary.attachment_0.data }}"
+  "file": "={{ $json.file }}"
 }
