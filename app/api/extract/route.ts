@@ -87,12 +87,3 @@ Required fields for customs entry: importer_name, supplier_name, supplier_countr
     return NextResponse.json({ error: 'Failed to extract document fields', detail: err?.message || String(err) }, { status: 500 })
   }
 }
-```
-
-Then **in n8n**, update your HTTP Request node:
-- Body Content Type: **JSON**
-- Body (raw JSON expression):
-```
-{
-  "file": "={{ $json.file }}"
-}
