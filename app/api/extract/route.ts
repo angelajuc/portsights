@@ -48,6 +48,7 @@ Return this exact structure:
 {
   "importer_name": "string or null",
   "importer_address": "string or null",
+  "importer_email" : "string or null",
   "supplier_name": "string or null",
   "supplier_country": "string or null",
   "country_of_origin": "string or null",
