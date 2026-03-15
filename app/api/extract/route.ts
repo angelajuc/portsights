@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-5-20251022',
+      model: 'claude-sonnet-4-5-20251101',
       max_tokens: 2000,
       messages: [
         {
@@ -84,6 +84,6 @@ Required fields for customs entry: importer_name, supplier_name, supplier_countr
 
   } catch (err) {
     console.error('Extract error:', err)
-    return NextResponse.json({ error: 'Failed to extract document fields', detail: err?.message || String(err) }, { status: 500 })
+    return NextResponse.json({ error: 'Failed to extract document fields', detail: err instanceof Error ? err.message : String(err) }, { status: 500 })
   }
 }
