@@ -3,15 +3,27 @@ import { anthropic } from '@/lib/anthropic'
 
 export async function POST(req: NextRequest) {
   try {
-    const formData = await req.formData()
-    const file = formData.get('file') as File
+    let base64: string
 
-    if (!file) {
-      return NextResponse.json({ error: 'No file provided' }, { status: 400 })
+    const contentType = req.headers.get('content-type') || ''
+
+    if (contentType.includes('application/json')) {
+      // n8n path — receives base64 JSON
+      const body = await req.json()
+      if (!body.file) {
+        return NextResponse.json({ error: 'No file provided' }, { status: 400 })
+      }
+      base64 = body.file
+    } else {
+      // Browser upload path — receives form data
+      const formData = await req.formData()
+      const file = formData.get('file') as File
+      if (!file) {
+        return NextResponse.json({ error: 'No file provided' }, { status: 400 })
+      }
+      const bytes = await file.arrayBuffer()
+      base64 = Buffer.from(bytes).toString('base64')
     }
-
-    const bytes = await file.arrayBuffer()
-    const base64 = Buffer.from(bytes).toString('base64')
 
     const response = await anthropic.messages.create({
       model: 'claude-opus-4-5',
@@ -69,8 +81,18 @@ Required fields for customs entry: importer_name, supplier_name, supplier_countr
     const parsed = JSON.parse(cleaned)
 
     return NextResponse.json(parsed)
+
   } catch (err) {
     console.error('Extract error:', err)
     return NextResponse.json({ error: 'Failed to extract document fields' }, { status: 500 })
   }
+}
+```
+
+Then **in n8n**, update your HTTP Request node:
+- Body Content Type: **JSON**
+- Body (raw JSON expression):
+```
+{
+  "file": "={{ $binary.attachment_0.data }}"
 }
